@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-mono;
+  }
+}
+
+.transaction-item {
+  @apply border border-primary/30 rounded-lg p-4 transition-all duration-300 hover:border-primary/60;
+}
+
+.transaction-item:hover {
+  @apply shadow-md;
+}
