@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { Bitcoin, DollarSign, Trash2, RefreshCw, ChevronDown, ChevronUp } from 'lucide-react';
+import { Bitcoin, Trash2, RefreshCw, ChevronDown, ChevronUp } from 'lucide-react';
 import { db, Transaction } from './db';
 
 function App() {
@@ -82,17 +82,17 @@ function App() {
         </div>
       )}
       
-      <div className="mb-8 flex items-center">
+      <div className="mb-8 flex flex-col w-full max-w-md">
         <input
           type="number"
           value={usdAmount}
           onChange={(e) => setUsdAmount(e.target.value)}
           placeholder="Enter USD amount"
-          className="p-2 bg-input text-foreground border border-border rounded-md mr-2 focus:outline-none focus:ring-2 focus:ring-ring"
+          className="p-2 bg-input text-foreground border border-border rounded-md mb-2 focus:outline-none focus:ring-2 focus:ring-ring w-full"
         />
         <button
           onClick={handleStack}
-          className="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
+          className="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors w-full"
           disabled={!bitcoinPrice}
         >
           Stack Now
